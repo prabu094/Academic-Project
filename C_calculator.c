@@ -7,6 +7,11 @@
 #include <math.h>  
 #include <stdlib.h>  
       
+#include <stdio.h>  
+#include <conio.h>  
+#include <math.h>  
+#include <stdlib.h>  
+      
 // function declarations   
 int addition();  
 int subtract();  
@@ -18,8 +23,8 @@ void exit();
   
 int main()  
 {  
-    
-    int operand;  
+    // declaration a local variable op;  
+    int op;  
     do  
     {  
         // displays the multiple operations of the Calculation
@@ -33,7 +38,7 @@ int main()
         scanf ("%d", &op);
       
     // use switch statement to call an operation  
-    switch (operand)  
+    switch (op)  
     {  
         case 1:  
             addition(); /* It call the addition() function  */  
@@ -68,7 +73,7 @@ int main()
             break;                        
     }  
     } 
-    while (operand != 7);  
+    while (op != 7);  
       
   
     return 0;        
@@ -80,7 +85,7 @@ int main()
 int addition()  
 {  
     int i, sum = 0, num, f_num; // declare a local variable 
-    printf("                                  Addition");
+    printf(" \n                                 Addition");
     printf("\n \n*****************************************************************************");
     printf(" \nHow many numbers you want to add: ");  
     scanf ("%d", &num);  
@@ -91,6 +96,7 @@ int addition()
         sum = sum + f_num;  
     }  
     printf (" \nTotal Sum of the numbers = %d\n", sum);  
+    printf("\n");
     return 0;  
 }  
   
@@ -98,35 +104,37 @@ int addition()
 int subtract()  
 {  
     int n1, n2, res;  
-    printf("                                  Subtaction");
+    printf(" \n                                 Subtaction");
     printf("\n \n*****************************************************************************");
     printf (" \nThe first number is: ");  
     scanf ("  %d", &n1);  
     printf (" \nThe second number is: ");  
     scanf ("  %d", &n2);  
     res = n1 - n2;    
-    printf (" \nThe subtraction of %d - %d is: %d\n", n1, n2, res);  
+    printf (" \nThe subtraction of %d - %d is: %d\n", n1, n2, res); 
+    printf("\n");
 }  
   
 // use multiply() function to multiply two numbers  
 int multiply()  
 {  
     int n1, n2, res;  
-    printf("                                  Multiplication");
+    printf(" \n                                 Multiplication");
     printf("\n \n*****************************************************************************");
     printf (" \nThe first number is: ");  
     scanf ("  %d", &n1);  
     printf (" \nThe second number is: ");  
     scanf ("  %d", &n2);  
     res = n1 * n2;    
-    printf (" \nThe multiply of %d * %d is: %d\n", n1, n2, res);  
+    printf (" \nThe multiply of %d * %d is: %d\n", n1, n2, res);
+    printf("\n");
 }  
   
 // use divide() function to divide two numbers  
 int divide()  
 {  
     int n1, n2, res;  
-    printf("                                  Division");
+    printf(" \n                                 Division");
     printf("\n \n*****************************************************************************");
     printf (" \nThe first number is: ");  
     scanf ("  %d", &n1);  
@@ -139,20 +147,22 @@ int divide()
         scanf ("%d", &n2);        
     }  
     res = n1 / n2;    
-    printf (" \n The division of %d / %d is: %d\n", n1, n2, res);  
+    printf (" \n The division of %d / %d is: %d\n", n1, n2, res); 
+    printf("\n");
 }  
   
 // use sq() function to get the square of the given number  
 int sq()  
 {  
     int n1, res; 
-    printf("                                  Square");
+    printf(" \n                                 Square");
     printf("\n \n*****************************************************************************");
     printf (" \nEnter a number to get the Square: ");  
     scanf ("  %d", &n1);  
       
     res = n1 * n1;    
     printf (" \n The Square of %d is: %d\n", n1, res);  
+    printf("\n");
 }  
   
 // use sqrt1() function to get the square root of the given number   
@@ -160,11 +170,12 @@ int sqrt1()
 {  
     float res;  
     int n1;  
-    printf("                                  Square Root");
+    printf(" \n                                 Square Root");
     printf("\n \n*****************************************************************************");
     printf ("\n Enter a number to get the Square Root: ");  
     scanf ("  %d", &n1);  
   
     res = sqrt(n1);   
-    printf (" \n The Square Root of %d is: %f\n", n1, res);  
+    printf (" \n The Square Root of %d is: %f\n", n1, res); 
+    printf("\n");
 }  
